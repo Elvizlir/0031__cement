@@ -1,0 +1,9 @@
+mixin s-more()
+	// start s-more
+	+b.SECTION.s-more.section#s-more&attributes(attributes)
+		h2.section-title Вместе с этим товаром обычно смотрят
+		.row
+			- for (var x = 0; x < 4; x++)
+				+e.col.col-md-3.col-6
+					+main-page-catalog-i()
+	// end s-more

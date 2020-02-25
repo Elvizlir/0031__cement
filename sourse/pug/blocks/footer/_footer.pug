@@ -1,0 +1,50 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+e.row.row
+				+e.col.col-lg-3
+					+e.logo-wrap
+						img.res-i(src='img/@2x/header-logo.png' alt='#')
+					+e.polite
+						a(href='#') Политика конфиденциальности
+					+e.contacts
+						+e.contacts-title Контакты:
+						a(href='tel:+79781000345') +7(978)1000-345
+						p г.Симферополь, ул. Данилова, 55
+						a(href='mailto:skladcemdvor@mail.ru') skladcemdvor@mail.ru
+					+e.nalog ИНН 9102240590 КПП 910201001
+				+e.col.col-lg-3
+					h3 Товары
+					+b.best-block
+						+side-best-i()
+						+side-best-i()
+						+side-best-i()
+				+e.col.col-lg-3
+					h3 Лучшие предложения
+					+b.best-block
+						+side-best-i()
+						+side-best-i()
+						+side-best-i()
+				+e.col.col-lg-3
+					h3 Каталог
+					+e.UL.catalog
+						li
+							a(href='#') Цемент
+						li
+							a(href='#') Песок, щебень
+						li
+							a(href='#') Сухие смеси и грунтовки
+						li
+							a(href='#') Гипсокартон
+						li
+							a(href='#') Газобетон
+						li
+							a(href='#') Камнень, кирпич
+						li
+							a(href='#') Лес, пиломатериал
+						li
+							a(href='#') Бетон
+						li
+							a(href='#') Металлопрокат
+						li
+							a(href='#') Стройматериалы

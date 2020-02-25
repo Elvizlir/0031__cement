@@ -1,0 +1,14 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			+e.row.row
+				.col-auto.d-md-none
+					.toggle-menu-mobile.toggle-menu-mobile--top-line
+						span
+				+e.col--right.col-lg-4.col-md-auto.col
+					+e.A.login-link.btn.btn-danger(href='#') Вход / Регистрация
+					+soc()
+				+e.col.col-lg-8.col-md.order-md-first
+					+top-line-mnu()
+	// end .top-line

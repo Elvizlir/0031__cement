@@ -1,0 +1,63 @@
+mixin s-sidebar()
+	// start s-sidebar
+	+b.SECTION.s-sidebar.section#s-sidebar&attributes(attributes)
+		+e.A.banner(href='#')
+			img.res-i(src='img/@2x/banner-sidebar.jpg' alt='')
+			+e.banner-descr
+				+e.banner-title Название акции
+				+e.banner-info Описание
+		
+		h3 Каталог товаров
+		+e.UL.categories
+			li
+				a(href='#') Цемент
+			li
+				a(href='#') Песок, щебень
+			li
+				a(href='#') Сухие смеси и грунтовки
+			li
+				a(href='#') Гипсокартон
+			li
+				a(href='#') Газобетон
+			li
+				a(href='#') Камнень, кирпич
+			li
+				a(href='#') Лес, пиломатериал
+			li
+				a(href='#') Бетон
+			li
+				a(href='#') Металлопрокат
+			li
+				a(href='#') Стройматериалы
+
+		form
+			input.custom-input(type='search' placeholder='Поиск товаров...' required)
+			button(type='submit' value='search') Поиск
+
+		+e.A.btn.btn.btn-danger(href='#') Скачать прайс-лист
+
+		h3 Доставка
+		+e.A.btn.btn.btn-danger(href='#') Рассчитать доставку
+		
+		h3 Лучшиие предложения
+		+b.best-block
+			+side-best-i()
+			+side-best-i()
+			+side-best-i()
+			+side-best-i()
+			+side-best-i()
+		
+		+e.widget-block
+			+e.widget
+				a(href='#')
+					img(src='img/@2x/widget1.jpg' alt='')
+			+e.widget
+				a(href='#')
+					img(src='img/@2x/widget2.jpg' alt='')
+			+e.widget
+				a(href='#')
+					img(src='img/@2x/widget3.jpg' alt='')
+			+e.widget
+				a(href='#')
+					img(src='img/@2x/widget4.jpg' alt='')
+	// end s-sidebar

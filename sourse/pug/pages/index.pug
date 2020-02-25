@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-sidebar/_s-sidebar.pug
+include ../blocks/s-main-page-catalog/_s-main-page-catalog.pug
+include ../blocks/s-stock/_s-stock.pug
+
+block variables
+	- let  mainPage='main-page'
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block()
+	.container
+		.page-row.row
+			.col-lg-3
+				+s-sidebar()
+			.col-lg-9
+				+s-main-page-catalog()
+				+s-form('Нужна консультация по продукции или условиям сотрудничества?')
+				+s-stock()
+	+footer()

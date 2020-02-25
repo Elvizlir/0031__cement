@@ -1,0 +1,38 @@
+mixin s-product()
+	// start s-product
+	+b.SECTION.s-product.section#s-product&attributes(attributes)
+		+e.row.row
+			+e.img-col.col-md-6
+				+e.A.product-img(data-fancybox="images" href='img/@2x/product-img.jpg')
+					img.res-i(src='img/@2x/product-img.jpg' alt='')
+			.col-md-6
+				+e.descr
+					h1.product-title РОССЦЕМ ПЦ500-Д0 (25КГ)
+					+e.P.price 1375 руб.
+					p Портландцемент без минеральных добавок марки ПЦ 500-Д0 (ЦЕМ I 42,5Н)
+					+e.cart
+						form
+							+e.INPUT.counter(type="number" value="1")
+							+e.BUTTON.cart-btn.btn.btn-danger(type="submit") В корзину
+					p Категория: 
+						a(href='#') Стройматериалы
+						| , 
+						a(href='#') Цемент
+		
+		+e.tabs-block
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Описание
+					.tabs__btn Характеристики
+				.tabs__wrap
+					.tabs__content.active
+						h2.section-title Описание
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat at iste vel nesciunt illum architecto id, aperiam voluptatum velit rerum. Rerum explicabo nulla reprehenderit rem, vel omnis fugit vitae neque.
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat at iste vel nesciunt illum architecto id, aperiam voluptatum velit rerum. Rerum explicabo nulla reprehenderit rem, vel omnis fugit vitae neque.
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat at iste vel nesciunt illum architecto id, aperiam voluptatum velit rerum. Rerum explicabo nulla reprehenderit rem, vel omnis fugit vitae neque.
+					.tabs__content
+						h2.section-title Характеристики
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam tenetur nobis facere voluptatem accusamus corrupti nesciunt nemo adipisci voluptas aspernatur ratione dolores asperiores excepturi consectetur, minus cupiditate architecto consequatur!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam tenetur nobis facere voluptatem accusamus corrupti nesciunt nemo adipisci voluptas aspernatur ratione dolores asperiores excepturi consectetur, minus cupiditate architecto consequatur!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam tenetur nobis facere voluptatem accusamus corrupti nesciunt nemo adipisci voluptas aspernatur ratione dolores asperiores excepturi consectetur, minus cupiditate architecto consequatur!
+	// end s-product

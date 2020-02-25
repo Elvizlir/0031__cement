@@ -1,0 +1,21 @@
+mixin s-catalog()
+	// start s-catalog
+	+b.s-catalog.section#s-catalog&attributes(attributes)
+		+e.sort-block
+			form
+				+e.SELECT.sort-select(name='sort')
+					option(value='') Сортировать по...
+					option(value='') Названию
+					option(value='') Названию
+					option(value='') Названию
+					option(value='') Названию
+					option(value='') Названию
+					option(value='') Названию
+		.row
+			- for (var x = 0; x < 6; x++)
+				+e.col.col-md-4.col-6
+					+main-page-catalog-i()
+		
+		+e.pugination-block
+			+pugin()
+	// end s-catalog

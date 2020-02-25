@@ -1,0 +1,12 @@
+mixin s-form(t)
+	// start s-form
+	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+		+e.block
+			+e.title=t
+			+e.subtitle Оставьте номер, мы перезвоним в течение 10 минут в рабочее время
+			form
+				input.custom-input(type='tel' placeholder='Ваш номер телефона' required)
+				+e.BUTTON.btn.btn.btn-danger(type="submit") Получить консультацию
+			+e.phone Или позвоните по телефону: 
+				a(href='tel:+79781000345') +7(978)1000-345
+	// end s-form

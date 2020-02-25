@@ -1,0 +1,27 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.slider--js
+				mixin slider-i()
+					.slick-slide
+						+e.item
+							+e.item-img-wrap
+								img(src='img/@2x/slider-i.jpg' alt='')
+							+e.item-descr
+								+e.item-title Название
+								+e.item-price 0 руб.
+								+e.A.item-btn.btn.btn-danger(href='') В корзину
+							+e.item-descr-hover
+								+e.A.item-title(href='#') Название
+								+e.item-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								+e.item-price 0 руб.
+								+e.A.item-btn.btn.btn-danger(href='') В корзину
+								
+				+slider-i()
+				+slider-i()
+				+slider-i()
+				+slider-i()
+				+slider-i()
+				+slider-i()
+	// end header-block

@@ -1,0 +1,71 @@
+mixin mob-mnu()
+	//- +b.toggle-menu-mobile--js.d-md-none
+	//- 	span
+	//- +b.menu-mobile--js.d-md-none
+	//- 	+b.toggle-menu-mobile--js
+	//- 		span
+	//- 	+e.inner
+		
+	//- 		+mnu()
+	//- 		.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+e.top-line
+				+e.main-row.row
+					+e.main-col--left.col-lg-4
+						+e.A.logo-wrap(href='/')
+							img(src='img/@2x/header-logo.png' alt='')
+
+					+e.main-col--right.col-lg-8
+						+e.in-row.row
+							+e.in-col--left.col-lg-7
+								+e.phone-block
+									+e.A.phone(href='tel:+79781000345')
+										+icon('phone')
+										| +7 (978) 1000 – 345
+								+e.search-block
+									form
+										+e.SELECT.form-select
+											option(value='') Все категории
+											option(value='category') Категория
+											option(value='category') Категория
+											option(value='category') Категория
+											option(value='category') Категория
+											option(value='category') Категория
+										+e.INPUT.form-input(name='search' type='text' placeholder='Поиск' required)
+										+e.BUTTON.form-btn.btn.btn-danger
+											+icon('search')
+
+							+e.in-col--right.col-lg-5
+								+e.basket-block
+									+e.basket-wrap
+										+e.basket-info
+											+e.A.basket-link(href='#')
+												+e.basket-icon-wrap
+													+icon('basket')
+													span.counter 0
+												+e.basket-price-wrap
+													+e.basket-title Корзина
+
+													+e.basket-price
+														strong 0.00 
+														| руб.
+											ul.basket-card
+												li 
+											
+
+										+e.A.basket-favorite(href='#')
+											+icon('favor')
+											.counter 0
+
+			.row
+				.col-auto.d-md-none
+					.toggle-menu-mobile.toggle-menu-mobile--top-nav
+						span
+				.col-12
+					+header-main-mnu()
+					
+	// end top-nav

@@ -1,0 +1,25 @@
+mixin s-main-page-catalog()
+	// start s-main-page-catalog
+	+b.SECTION.s-main-page-catalog.section#s-main-page-catalog&attributes(attributes)
+		+e.banner-row.row
+			.col-md-6
+				+e.A.banner-sm(href='#')
+					img.res-i(src='img/@2x/banner-sm1.jpg' alt='#')
+			.col-md-6
+				+e.A.banner-sm(href='#')
+					img.res-i(src='img/@2x/banner-sm2.jpg' alt='#')
+		
+		+e.categories-row.row
+			mixin category-i(i, t)
+				+e.category-col.col-md-3.col-6
+					+e.A.category-item(href='#')
+						+e.category-img-wrap
+							img.res-i(src=`img/@2x/catalog-i${i}.jpg` alt='#')
+						+e.category-title=t
+			+category-i('1','Цемент')
+			+category-i('2','Песок, Щебень')
+			+category-i('3','Металлопрокат')
+			+category-i('4','Газобетон')
+		
+
+	// end s-main-page-catalog

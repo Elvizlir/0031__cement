@@ -1,0 +1,29 @@
+mixin s-delivery()
+	// start s-delivery
+	+b.SECTION.s-delivery.section#s-delivery&attributes(attributes)
+		h2.section-title Наш автотранспорт
+		.row
+			mixin delivery-i(i, t)
+				+e.col.col-md-3.col-6
+					+e.item
+						+e.item-img
+							img(src=`img/@2x/delivery-i${i}.jpg` alt='')
+						+e.item-title=t
+						block
+			+delivery-i('1','daf')
+				+e.item-descr
+					span до 40 тонн
+					span разгрузка назад
+			+delivery-i('2','камаз')
+				+e.item-descr
+					span до 15 тонн
+					span разгрузка назад
+			+delivery-i('3','зил')
+				+e.item-descr
+					span до 7 тонн
+					span разгрузка назад/в бок
+			+delivery-i('4','газель')
+				+e.item-descr
+					span до 5 тонн
+					span разгрузка назад/в бок
+	// end s-delivery
