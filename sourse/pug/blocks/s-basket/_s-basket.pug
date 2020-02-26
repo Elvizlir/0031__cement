@@ -1,0 +1,74 @@
+mixin s-basket()
+	// start s-basket
+	+b.SECTION.s-basket.section#s-basket&attributes(attributes)
+		.table-responsive
+			+e.table
+				form
+					table
+						thead
+							tr
+								th.product-remove
+								th.product-thumbnail
+								th.product-name Товар
+								th.product-price Цена
+								th.product-quantity Количество
+								th.product-subtotal Итого
+						tbody
+							tr
+								td.product-remove
+									a.remove(href='#')
+										+icon('close')
+								td.product-thumbnail
+									a(href='#')
+										img.res-i(src='img/@2x/slider-i.jpg' alt='')
+								td.product-name
+									a(href='#') РОССЦЕМ ПЦ500-Д0 (25КГ)
+								td.product-price 1375 руб.
+								td.product-quantity
+									+e.INPUT.counter(type="number" value="1")
+								td.product-subtotal 1375 руб.
+					+e.actions-line
+						+e.BUTTON.update.btn.btn-danger(type="submit") Обновить корзину
+		+e.delivery-check
+			+in-c('checkbox','Необходима доставка')
+
+		+e.form-block
+			h3 Оформить заказ
+			+form-wrap
+				.row
+					.col-md-6
+						+input('Фамилия*')(required)
+					.col-md-6
+						+input('Имя*')(required)
+					.col-md-3
+						+input('Организация')
+					.col-md-3
+						+input('Телефон*','tel')(required)
+					.col-md-6
+						+input('Email')
+					.col-md-12
+						+input('Примечание к заказу','textarea')
+				+in-c('checkbox','Создать аккаунт')
+				+e.BUTTON.btn.btn.btn-danger(type="submit") Оформить заказ
+		
+		+e.form-block
+			h3 Адрес доставки:
+			+form-wrap
+				.row
+					.col-md-6
+						+input('Город*')(required)
+					.col-md-6
+						+input('Дом*')(required)
+					.col-md-6
+						+input('Улица*')(required)
+					.col-md-6
+						+input('Примечание')
+				+e.BUTTON.btn.btn.btn-danger(type="submit") Оформить заказ
+
+		+e.thanks-block
+			h3 Спасибо за заказ!
+			p Номер заказа 
+				strong ХХХ-ХХХХ
+			p Наш менеджер свяжется с Вами в течение 15 минут.
+
+	// end s-basket

@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/s-main-page-catalog/_s-main-page-catalog.pug
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-sidebar/_s-sidebar.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-product/_s-product.pug
+include ../blocks/s-more/_s-more.pug
+include ../blocks/s-delivery/_s-delivery.pug
+include ../blocks/s-basket/_s-basket.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Корзина'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	//- +header-block()
+	.container
+		.page-row.row
+			.col-lg-9
+				+breadcrumb('Главная', title)
+				h2.page-title.page-title--second Моя корзина
+				+s-basket()
+			.col-lg-3.order-lg-first
+				+s-sidebar()
+	+footer()
