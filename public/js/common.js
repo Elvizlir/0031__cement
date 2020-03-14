@@ -140,12 +140,17 @@ function eventHandler() {
 	$('.header-block__slider--js').slick(_objectSpread({}, defaultSlide, {
 		slidesToShow: 1,
 		responsive: [{
-			breakpoint: 576,
+			breakpoint: 991,
+			settings: {
+				slidesToShow: 5
+			}
+		}, {
+			breakpoint: 580,
 			settings: {
 				slidesToShow: 3
 			}
 		}, {
-			breakpoint: 380,
+			breakpoint: 400,
 			settings: {
 				slidesToShow: 2
 			}

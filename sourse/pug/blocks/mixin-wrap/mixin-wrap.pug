@@ -8,13 +8,12 @@ mixin icon(name,mod)
 //-/ svg-sprite
 
 mixin side-best-i()
-	+e.best-item
-		+e.A.best-title(href='#')
+	+e.A.best-item(href='#')
+		+e.best-item-img
 			img.res-i(src='img/@2x/side-best-i.jpg' alt='')
-			span Название
-		+e.best-rate
-			+rating()
-		+e.best-price 0 руб.
+		+e.best-item-descr
+			+e.best-title Название
+			+e.best-price 0 руб.
 
 mixin main-page-catalog-i()
 			+b.catalog-item
@@ -129,17 +128,7 @@ mixin rating()
 mixin top-line-mnu()
 	ul.navbar
 		li.menu-item
-			a.dropdown-toggle(href='#') Цемент
-				span.caret
-			ul.dropdown-menu
-				li.menu-item
-					a(href='#') Гипс
-				li.menu-item
-					a(href='#') Гипс
-				li.menu-item
-					a(href='#') Гипс
-				li.menu-item
-					a(href='#') Гипс
+			a(href='#') Цемент
 		li.menu-item
 			a(href='#') Песок/Щебень
 		li.menu-item
@@ -150,9 +139,19 @@ mixin top-line-mnu()
 mixin header-main-mnu()
 	ul.navbar
 		li.menu-item
-			a(href='#')
+			a.dropdown-toggle(href='#')
 				+icon('home') 
 				| Главная
+				span.caret
+			ul.dropdown-menu
+				li.menu-item
+					a(href='#') Личный кабинет
+				li.menu-item
+					a(href='#') Новости
+				li.menu-item
+					a(href='#') Гипс
+				li.menu-item
+					a(href='#') Гипс
 		li.menu-item
 			a.dropdown-toggle(href='#') Каталог
 				span.caret
@@ -166,7 +165,17 @@ mixin header-main-mnu()
 				li.menu-item
 					a(href='#') Гипс
 		li.menu-item
-			a(href='#') Личный кабинет
+			a.dropdown-toggle(href='#') Личный кабинет
+				span.caret
+			ul.dropdown-menu
+				li.menu-item
+					a(href='#') Личный кабинет
+				li.menu-item
+					a(href='#') Новости
+				li.menu-item
+					a(href='#') Гипс
+				li.menu-item
+					a(href='#') Гипс
 		li.menu-item
 			a(href='#') Новости
 		li.menu-item

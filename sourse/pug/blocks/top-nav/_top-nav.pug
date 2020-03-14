@@ -21,11 +21,14 @@ mixin top-nav()
 
 					+e.main-col--right.col-lg-8
 						+e.in-row.row
-							+e.in-col--left.col-lg-7
-								+e.phone-block
-									+e.A.phone(href='tel:+79781000345')
+							+e.in-col--left.col-lg-8
+								+e.contact-block
+									+e.A.contact-link(href='tel:+79781000345')
 										+icon('phone')
 										| +7 (978) 1000 – 345
+									+e.A.contact-link(href='mailto:skladcemdvor@mail.ru ')
+										+icon('mail')
+										| skladcemdvor@mail.ru
 								+e.search-block
 									form
 										+e.SELECT.form-select
@@ -39,7 +42,7 @@ mixin top-nav()
 										+e.BUTTON.form-btn.btn.btn-danger
 											+icon('search')
 
-							+e.in-col--right.col-lg-5
+							+e.in-col--right.col-lg-4
 								+e.basket-block
 									+e.basket-wrap
 										+e.basket-info
@@ -55,11 +58,6 @@ mixin top-nav()
 														| руб.
 											ul.basket-card
 												li 
-											
-
-										+e.A.basket-favorite(href='#')
-											+icon('favor')
-											.counter 0
 
 			.row
 				.col-auto.d-md-none

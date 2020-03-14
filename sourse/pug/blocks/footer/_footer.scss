@@ -62,6 +62,12 @@
     }
   }
 
+  .best-block{
+    &__best-price{
+      color: #fff;
+    }
+  }
+
 // 
 @include media-breakpoint-up(xl) {}
 

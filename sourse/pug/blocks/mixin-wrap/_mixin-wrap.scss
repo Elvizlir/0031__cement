@@ -114,23 +114,29 @@
 .best-block{
 	margin-bottom: rem(30);
 	&__best-item{
+		display: flex;
 		padding: 4px;
 		margin-bottom: 5px;
 		border: 1px solid #F1F1F1;
 	}
+	&__best-item-img{
+		margin-right: rem(5);
+	}
+	&__best-item-descr{
+		display: flex;
+		flex-direction: column;
+	}
 	&__best-title{
-		span{
-			font-size: rem(16);
-			font-weight: 700;
-		}
-		img{
-			margin-right: rem(3);
-			width: rem(60);
-			height: auto;
-			float: left;
-		}
+		display: block;
+		font-size: rem(16);
+		font-weight: 700;
 	}
 	&__best-price{
+		color: #000;
+		margin-bottom: auto;
+		margin-top: auto;
+		display: block;
+		font-size: rem(16);
 		font-weight: 700;
 	}
 }
