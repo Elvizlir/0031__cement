@@ -33,6 +33,37 @@
 }
  
 
+.info-line{
+	display: flex;
+	align-items: center;
+	color: #515151;
+	&__date{
+		margin-right: rem(10);
+		font-size: rem(12);
+		.icon{
+			margin-right: rem(3);
+			margin-bottom: rem(2);
+			font-size: rem(12);
+		}
+	}
+	
+	&__tags{
+		.icon{
+			// margin-bottom: rem(2);
+			margin-right: rem(3);
+			font-size: rem(12);
+		}
+		a{
+			line-height: 1;
+			margin-right: rem(3);
+			font-size: rem(12);
+			color: #515151;
+			font-weight: 700;
+		}
+	}
+}
+
+
 .counter{
 	counter-reset: num;
 	&__item {
@@ -204,6 +235,8 @@
 }
 
 .pagination-wrapper{
+	padding: rem(20) 0;
+	background-color: #ef0000;
 	.page-numbers{
 		margin: 0;
 		&:hover{

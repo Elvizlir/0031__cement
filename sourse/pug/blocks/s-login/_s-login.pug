@@ -1,0 +1,12 @@
+mixin s-login()
+	// start s-login
+	+b.s-login.section#s-login&attributes(attributes)
+		h2.page-title Вход
+		+e.block
+			+form-wrap
+				+input('','text','Имя пользователя или адрес электронной почты*','name_or_email')
+				+input('','text','Пароль*','password')
+				+e.btn-line
+					+e.btn.btn.btn-danger Вход
+					+in-c('checkbox','Запомнить меня')
+	// end s-login

@@ -39,6 +39,17 @@ mixin breadcrumb(...items)
 						meta(itemprop="position" content= (i + 1) )
 
 
+mixin info-line()
+	+b.info-line
+		+e.date
+			+icon('clock')
+			| 13 марта 2020
+		+e.tags
+			+icon('tag')
+			a(href='#') Цемент
+			|, 
+			a(href='#') Доставка
+
 		
 //- pugination
 mixin pugin()

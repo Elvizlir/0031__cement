@@ -1,12 +1,19 @@
 mixin s-contacts()
 	// start s-contacts
 	+b.SECTION.s-contacts.section#s-contacts&attributes(attributes)
-		+e.wrap
-			+e.block
+		+e.nav-line
+			mixin contact-btn-i(t, i)
+				+e.contact-btn.btn.btn-danger.scroll-link(href=i)=t
+			+contact-btn-i('Симферополь','#simferopol')
+			+contact-btn-i('Севастополь','#sevastopol')
+			+contact-btn-i('Феодосия','#feodosiya')
+			+contact-btn-i('Алушта','#alushta')
+			+contact-btn-i('Евпатория','#evpatoria')
+		mixin contacts-i(t)
+			+e.block&attributes(attributes)
+				+e.H3.block-title=t
 				.row
 					.col-md-6
-						p
-							strong г. Симферополь
 						p Звоните:<br>
 							a(href='tel:+79781000345') +7 (978) 1000 - 345
 						p Пишите:<br>
@@ -17,51 +24,11 @@ mixin s-contacts()
 					.col-md-6
 						+e.map-wrap
 							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66787b6b625b635b54996978d39a19acceed9bad718b55af4921193b71d82d21&amp;source=constructor" width="428" height="282"></iframe>
-			+e.block
-				.row
-					.col-md-6
-						p
-							strong г. Симферополь
-						p Звоните:<br>
-							a(href='tel:+79781000345') +7 (978) 1000 - 345
-						p Пишите:<br>
-							a(href='mailto:skladcemdvor@mail.ru') skladcemdvor@mail.ru
-						p Приходите:<br>
-							span г. Симферополь. ул. Данилова, 55
-						p Время работы: пн – пт 8.00–17.00, сб 8.00-14.00
-					.col-md-6
-						+e.map-wrap
-							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66787b6b625b635b54996978d39a19acceed9bad718b55af4921193b71d82d21&amp;source=constructor" width="428" height="282"></iframe>
-			+e.block
-				.row
-					.col-md-6
-						p
-							strong г. Симферополь
-						p Звоните:<br>
-							a(href='tel:+79781000345') +7 (978) 1000 - 345
-						p Пишите:<br>
-							a(href='mailto:skladcemdvor@mail.ru') skladcemdvor@mail.ru
-						p Приходите:<br>
-							span г. Симферополь. ул. Данилова, 55
-						p Время работы: пн – пт 8.00–17.00, сб 8.00-14.00
-					.col-md-6
-						+e.map-wrap
-							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66787b6b625b635b54996978d39a19acceed9bad718b55af4921193b71d82d21&amp;source=constructor" width="428" height="282"></iframe>
-			+e.block
-				.row
-					.col-md-6
-						p
-							strong г. Симферополь
-						p Звоните:<br>
-							a(href='tel:+79781000345') +7 (978) 1000 - 345
-						p Пишите:<br>
-							a(href='mailto:skladcemdvor@mail.ru') skladcemdvor@mail.ru
-						p Приходите:<br>
-							span г. Симферополь. ул. Данилова, 55
-						p Время работы: пн – пт 8.00–17.00, сб 8.00-14.00
-					.col-md-6
-						+e.map-wrap
-							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66787b6b625b635b54996978d39a19acceed9bad718b55af4921193b71d82d21&amp;source=constructor" width="428" height="282"></iframe>
+		+contacts-i('Симферополь')(id='simferopol')
+		+contacts-i("Севастополь")(id='sevastopol')
+		+contacts-i("Феодосия")(id='feodosiya')
+		+contacts-i("Алушта")(id='alushta')
+		+contacts-i("Евпатория")(id='evpatoria')
 		+e.form-block
 			h3 Связаться с нами
 			+form-wrap

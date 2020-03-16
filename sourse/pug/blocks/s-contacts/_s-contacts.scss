@@ -13,9 +13,10 @@
 			align-items: center;
 			@include roww(5);
 		}
-		padding: rem(20) 0;
-		border-bottom: 1px solid #F1F1F1;
+		padding: rem(20);
+		border: 1px solid #F1F1F1;
 		font-size: rem(16);
+		margin-bottom: rem(10);
 		a{
 			color: #000;
 		}
@@ -25,6 +26,32 @@
 				margin-bottom: rem(22);
 			}
 		}
+	}
+
+	&__nav-line{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: rem(20);
+	}
+
+	&__contact-btn{
+		margin-bottom: rem(-1);
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		flex-grow: 1;
+		border-radius: 0;
+		border: 1px solid #515151;
+		&:not(:last-child){
+			margin-right: rem(-1);
+		}
+	}
+
+	&__block-title{
+		color: #515151;
+		text-align: center;
+		border: none;
+		margin: 0 0 rem(20);
 	}
 
 	&__map-wrap{
@@ -39,6 +66,7 @@
 	}
 
 	&__form-block{
+		margin-top: rem(30);
 		background-color: #f2f2f2;
 		padding: rem(20) rem(20);
 		h3{

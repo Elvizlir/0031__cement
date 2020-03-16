@@ -1,0 +1,23 @@
+mixin s-blog-catalog()
+	// start s-blog-catalog
+	+b.s-blog-catalog.section#s-blog-catalog&attributes(attributes)
+		.row
+			mixin blog-i()
+				+e.col.col-sm-6
+					+e.item
+						+e.A.item-img-wrap(href='#')
+							img(src='img/@2x/blog-item-img.jpg' alt='')
+						+e.item-header
+							+e.H2.item-title Заголовок
+							+info-line
+						+e.item-body
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Id porro sit est! Porro debitis commodi corporis assumenda officia accusamus possimus eos, voluptates nulla nemo minima nam! Commodi vel ut obcaecati!
+							+e.A.item-btn.btn.btn-danger(href='#') Читать дальше
+			+blog-i()
+			+blog-i()
+			+blog-i()
+			+blog-i()
+			+blog-i()
+			+blog-i()
+		+pugin()
+	// end s-blog-catalog

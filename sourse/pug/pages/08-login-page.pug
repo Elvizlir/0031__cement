@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/s-main-page-catalog/_s-main-page-catalog.pug
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-sidebar/_s-sidebar.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-login/_s-login.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Мой аккаунт'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	.container
+		.page-row.row
+			.col-lg-9
+				+breadcrumb('Главная', title)
+				h1.page-title.page-title--second=title
+				+s-login()
+			.col-lg-3
+				+s-sidebar()
+	+footer()

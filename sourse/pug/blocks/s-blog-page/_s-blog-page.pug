@@ -1,0 +1,44 @@
+mixin s-blog-page()
+	// start s-blog-page
+	+b.SECTION.s-blog-page.section#s-blog-page&attributes(attributes)
+		img.res-i(src='img/@2x/blog-page-img.jpg' alt='')
+		h1.page-title.page-title--second=title
+		+info-line()
+		p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum neque molestiae modi ut quam illo, tempora vel commodi sit corrupti delectus beatae, ad minus tenetur magni. Nostrum aperiam optio reprehenderit?
+		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit suscipit vel nesciunt ipsa id consequatur ut magnam commodi adipisci ad. Expedita esse neque dolor! Aliquam officia molestiae eaque veniam rem.
+		a(href='#')
+			img.res-i(src='img/@2x/blog-page-img2.jpg' alt='')
+		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus, pariatur quibusdam, quisquam debitis id illo earum explicabo enim maxime ipsum! Consequuntur sunt architecto, alias consequatur numquam ut. Commodi, quas?
+		blockquote
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quidem nesciunt doloribus corrupti inventore debitis aliquid iure quibusdam at laudantium officiis nobis totam, similique dolore enim molestiae commodi ad sunt?
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non ex explicabo? Dolorum, ab tempora. Ratione temporibus accusamus, magni sequi incidunt aspernatur adipisci consectetur in. Explicabo hic quas officiis cupiditate.
+		h2 Заголовок
+		ul
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+		h2 Заголовок
+		ol
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+			li элемент списка
+		p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis totam, reiciendis illum eaque ipsa dignissimos ducimus. Facere, consequuntur quisquam ratione dolores repudiandae enim expedita, voluptatem cum commodi veniam vero.
+		p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque asperiores quidem, nobis minus animi vitae esse voluptate ipsam hic, totam, suscipit nulla atque voluptatibus eligendi? At voluptatem fugiat perferendis quia!
+		h2 Похожие новости
+		+b.related
+			mixin related-i()
+				+e.item
+					img(src='img/@2x/related.jpg' alt='')
+					+e.item-info
+						+e.A.item-title(href='#') Заголовок
+						+e.item-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			+related-i()
+			+related-i()
+
+	// end s-blog-page
