@@ -108,6 +108,9 @@
 			margin-right: rem(5);
 			color: $danger;
 			font-size: rem(14);
+			&-phone{
+				color: #008000;
+			}
 		}
 		&:hover{
 			text-decoration: none;

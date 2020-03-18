@@ -8,6 +8,7 @@ include ../blocks/s-sidebar/_s-sidebar.pug
 include ../blocks/s-catalog/_s-catalog.pug
 include ../blocks/s-product/_s-product.pug
 include ../blocks/s-more/_s-more.pug
+include ../blocks/s-page-banners/_s-page-banners.pug
 
 block variables
 	- let  mainPage= null
@@ -24,6 +25,7 @@ block pagecontent
 		.page-row.row
 			.col-lg-9
 				+breadcrumb('Главная', 'Каталог', title)
+				+s-page-banners()
 				+s-product()
 				+s-more()
 			.col-lg-3.order-lg-first

@@ -11,15 +11,57 @@
 		@include media-breakpoint-down(sm){
 			margin-bottom: rem(20);
 		}
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
 	}
 
-	&__product-img{
-		padding: 5px;
+	&__img-block{
+		max-width: rem(420);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	
+	&__main-slider{
+		padding: rem(5);
 		border: 1px solid #F1F1F1;
-		display: inline-block;
+		margin-bottom: rem(5);
+	}
+	
+	&__pre-slider{
+		border: 1px solid #F1F1F1;
+		padding: rem(5);
+		.slick-slide{
+			@include mt;
+			opacity: .7;
+			padding-left: rem(10);
+			padding-right: rem(10);
+			&.slick-current{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__main-img{
+		@include block(396,260);
+		display: block;
+		position: relative;
+		img{
+			@include a-cent();
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__pre-img{
+		@include block(120,100);
+		display: block;
+		position: relative;
+		img{
+			@include a-cent();
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__price{

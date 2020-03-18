@@ -18,8 +18,16 @@
 		}
 	}
 	.icon{
-		color: $secondary;
-	font-size: rem(16);
+		font-size: rem(16);
+		&-vk{
+			color: #597da3;
+		}
+		&-instagram{
+			color: #C13584;
+		}
+		&-viber{
+			color: #8f5db7;
+		}
 	}
 	 
 

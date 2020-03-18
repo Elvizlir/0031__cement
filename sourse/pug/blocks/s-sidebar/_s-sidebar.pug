@@ -1,11 +1,19 @@
 mixin s-sidebar()
 	// start s-sidebar
 	+b.SECTION.s-sidebar.section#s-sidebar&attributes(attributes)
-		+e.A.banner(href='#')
-			img.res-i(src='img/@2x/banner-sidebar.jpg' alt='')
-			+e.banner-descr
-				+e.banner-title Название акции
-				+e.banner-info Описание
+		+e.banner-slider--js
+			.slick-slide
+				+e.A.banner(href='#')
+					img.res-i(src='img/@2x/banner-sidebar.jpg' alt='')
+					+e.banner-descr
+						+e.banner-title Название1
+						+e.banner-info Описание1
+			.slick-slide
+				+e.A.banner(href='#')
+					img.res-i(src='img/@2x/banner-sidebar.jpg' alt='')
+					+e.banner-descr
+						+e.banner-title Название2
+						+e.banner-info Описание2
 		
 		h3 Каталог товаров
 		+e.UL.categories
@@ -20,7 +28,7 @@ mixin s-sidebar()
 			li
 				a(href='#') Газобетон
 			li
-				a(href='#') Камнень, кирпич
+				a(href='#') Камень, кирпич
 			li
 				a(href='#') Лес, пиломатериал
 			li

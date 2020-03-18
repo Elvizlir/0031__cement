@@ -92,31 +92,31 @@ function eventHandler() {
 	// 	}; 
 	// }); 
 	// /закрыть/открыть мобильное меню
-
-	function heightses() {
-		var w = $(window).width(); // $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
-		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		}); // конец добавил
-	}
-
-	$(window).resize(function () {
-		heightses();
-	});
-	heightses(); // листалка по стр
+	// function heightses() {
+	// 			// $(".main-wrapper").css("margin-bottom", $('footer').height())
+	// 			// $(".otz__item .text-wrap ").height('auto').equalHeights();
+	// 			// 
+	// 			// скрывает моб меню
+	// 			const stickyHeight = $("s-contacts__nav-line").offsetTop;
+	// 			const contactsSticky = $("s-contacts__nav-line").innerHeight();
+	// 	$(window).scroll(function() {
+	// 		if ($(window).scrollTop() > topH) {
+	// 			$('.top-nav  ').addClass('fixed');
+	// 		} else {
+	// 			$('.top-nav  ').removeClass('fixed');
+	// 		}
+	// 	});
+	// 	// конец добавил
+	// }
+	// $(window).resize(function() {
+	// 	heightses();
+	// });
+	// heightses();
+	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
+		var destination = $(elementClick).offset().top - 150;
 		$('html, body').animate({
 			scrollTop: destination
 		}, 1100);
@@ -155,34 +155,27 @@ function eventHandler() {
 				slidesToShow: 2
 			}
 		}]
-	})); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
-	// modal window
-	//    const wow = new WOW({ mobile: false });
-	//         wow.init();
+	}));
+	$('.s-sidebar__banner-slider--js').slick(_objectSpread({}, defaultSlide, {
+		autoplaySpeed: 3000,
+		arrows: false,
+		autoplay: true,
+		fade: true,
+		slidesToShow: 1
+	}));
+	$('.s-product__main-slider--js').slick(_objectSpread({}, defaultSlide, {
+		arrows: false,
+		asNavFor: '.s-product__pre-slider--js',
+		fade: true,
+		slidesToShow: 1
+	}));
+	$('.s-product__pre-slider--js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 4.5,
+		arrows: false,
+		draggable: false,
+		asNavFor: '.s-product__main-slider--js',
+		focusOnSelect: true
+	}));
 
 	var gets = function () {
 		var a = window.location.search;
@@ -231,7 +224,21 @@ function eventHandler() {
 	});
 	$(".toggle-menu-mobile--top-nav").click(function () {
 		$('.top-nav .navbar').slideToggle();
-	});
+	}); // 	var stickyNavTop = $('.s-contacts__nav-line').offset().top;
+	// 	var stickyNav = function(){
+	// 	 var scrollTop = $(window).scrollTop();
+	// 	 if (scrollTop > stickyNavTop) { 
+	// 			 $('.s-contacts__nav-line').addClass('sticky');
+	// 	 } else {
+	// 			 $('.s-contacts__nav-line').removeClass('sticky'); 
+	// 	 }
+	// };
+	// if($('.s-contacts__nav-line').length){
+	// 	stickyNav();
+	// 	$(window).scroll(function() {
+	// 	 stickyNav();
+	// 	});
+	// }
 }
 
 ;

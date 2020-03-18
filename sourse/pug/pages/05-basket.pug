@@ -10,6 +10,7 @@ include ../blocks/s-product/_s-product.pug
 include ../blocks/s-more/_s-more.pug
 include ../blocks/s-delivery/_s-delivery.pug
 include ../blocks/s-basket/_s-basket.pug
+include ../blocks/s-page-banners/_s-page-banners.pug
 
 block variables
 	- let  mainPage= null
@@ -26,6 +27,7 @@ block pagecontent
 		.page-row.row
 			.col-lg-9
 				+breadcrumb('Главная', title)
+				+s-page-banners()
 				h2.page-title.page-title--second Моя корзина
 				+s-basket()
 			.col-lg-3.order-lg-first

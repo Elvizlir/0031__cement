@@ -2,6 +2,7 @@
 // start .s-contacts
 .s-contacts {
 	padding: 0;
+	position: relative;
 
 	&__wrap{
 		margin-bottom: rem(30);
@@ -29,6 +30,13 @@
 	}
 
 	&__nav-line{
+		&.sticky{
+			position: fixed;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: rem(20);

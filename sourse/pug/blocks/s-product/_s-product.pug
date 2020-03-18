@@ -3,8 +3,39 @@ mixin s-product()
 	+b.SECTION.s-product.section#s-product&attributes(attributes)
 		+e.row.row
 			+e.img-col.col-md-6
-				+e.A.product-img(data-fancybox="images" href='img/@2x/product-img.jpg')
-					img.res-i(src='img/@2x/product-img.jpg' alt='')
+				+e.img-block
+					+e.main-slider--js
+						.slick-slide
+							+e.A.main-img(data-fancybox='product-gal' href='img/@2x/product-img.jpg')
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.A.main-img(data-fancybox='product-gal' href='img/@2x/product-img.jpg')
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.A.main-img(data-fancybox='product-gal' href='img/@2x/product-img.jpg')
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.A.main-img(data-fancybox='product-gal' href='img/@2x/product-img.jpg')
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.A.main-img(data-fancybox='product-gal' href='img/@2x/product-img.jpg')
+								img(src='img/@2x/product-img.jpg' alt='')
+					+e.pre-slider--js
+						.slick-slide
+							+e.pre-img
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.pre-img
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.pre-img
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.pre-img
+								img(src='img/@2x/product-img.jpg' alt='')
+						.slick-slide
+							+e.pre-img
+								img(src='img/@2x/product-img.jpg' alt='')
 			.col-md-6
 				+e.descr
 					h1.product-title РОССЦЕМ ПЦ500-Д0 (25КГ)
