@@ -1,16 +1,34 @@
 .header-block {
 	display: block;
 
-	background-image: url(../img/@2x/header-bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-
+	position: relative;
+	
 	border-bottom: 10px solid #D3D3D3;
- 
-	.container{
-		// @include media-breakpoint-up(xl){
-		// 	max-width: rem(1460);
-		// }
+	
+	z-index: 3;
+	
+	&::before{
+		z-index: -2;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-image: url(../img/@2x/header-bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	&::after{
+		top: 0;
+		left: 0;
+		z-index: -1;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 
 	&__slider{
