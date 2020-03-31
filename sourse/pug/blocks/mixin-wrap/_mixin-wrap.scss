@@ -10,8 +10,10 @@
 		@include mt;
 		display: flex;
 		align-items: center;
+		margin-right: rem(-1);
 		justify-content: center;
 		border-right: 1px solid #F1F1F1;
+		border-left: 1px solid #F1F1F1;
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .6 ;

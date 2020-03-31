@@ -4,26 +4,17 @@ mixin s-delivery()
 		h2.section-title Наш автотранспорт
 		.row
 			mixin delivery-i(i, t)
-				+e.col.col-md-3.col-6
+				+e.col.col-md-6
 					+e.item
 						+e.item-img
-							img(src=`img/@2x/delivery-i${i}.jpg` alt='')
-						+e.item-title=t
-						block
-			+delivery-i('1','daf')
-				+e.item-descr
-					span до 40 тонн
-					span разгрузка назад
-			+delivery-i('2','камаз')
-				+e.item-descr
-					span до 15 тонн
-					span разгрузка назад
-			+delivery-i('3','зил')
-				+e.item-descr
-					span до 7 тонн
-					span разгрузка назад/в бок
-			+delivery-i('4','газель')
-				+e.item-descr
-					span до 5 тонн
-					span разгрузка назад/в бок
+							img.res-i(src='img/@2x/delivery-i1.jpg' alt='')
+						+e.item-descr
+							+e.item-title DAF
+							p Грузоподьемность: до 40 тонн
+							br
+							p Направление разгрузки:
+							p назад
+			- for (var x = 0; x < 8; x++)
+				+delivery-i()
+
 	// end s-delivery

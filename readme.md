@@ -5,6 +5,5 @@
 <a href='https://elvizlir.github.io/0031__cement/public/05-basket.html'>Корзина</a><br>
 <a href='https://elvizlir.github.io/0031__cement/public/06-contacts.html'>Контакты</a><br>
 <a href='https://elvizlir.github.io/0031__cement/public/07-about-us.html'>О компании</a><br>
-<a href='https://elvizlir.github.io/0031__cement/public/08-login-page.html'>Вход</a><br>
 <a href='https://elvizlir.github.io/0031__cement/public/09-blog-catalog.html'>Каталог новостей</a><br>
 <a href='https://elvizlir.github.io/0031__cement/public/10-blog-page.html'>Страница новости</a><br>
